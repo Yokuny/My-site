@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // let noOsNavigatorVersion = userInfo.split(/[()]+/);
     document.querySelector('#navigatorInfo').innerHTML = navigator.userAgent;
     document.querySelector('#vendorInfo').innerHTML = navigator.vendor;
-    document.querySelector('#userNavigator').innerHTML = `${navigator.appCodeName} version ${navigator.product}`;
     document.querySelector('#userCPUClocks').innerHTML = `machine has ${navigator.hardwareConcurrency} CPU's cores`;
     document.querySelector('#acessData').innerHTML = Date();
     // const mouseMovePage = document.getElementById('mouseMovePage');
