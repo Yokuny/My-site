@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var a = document.getElementById('osInfo')
-    a.innerHTML = window.navigator.platform;
+    document.getElementById('osInfo').innerHTML = window.navigator.platform;
     // let userBrowser, userInfo = navigator.userAgent;
     // console.log(userInfo);
     // if(userInfo.indexOf("Chrome") > -1) {
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // let noOsNavigatorVersion = userInfo.split(/[()]+/);
     document.querySelector('#navigatorInfo').innerHTML = navigator.userAgent;
     document.querySelector('#userNavigator').innerHTML = `${navigator.appCodeName} version ${navigator.product}`;
-    document.querySelector('#userClocks').innerHTML = `machine has ${navigator.hardwareConcurrency} CPU's cores`;
+    document.querySelector('#userCPUClocks').innerHTML = `machine has ${navigator.hardwareConcurrency} CPU's cores`;
     // const mouseMovePage = document.getElementById('mouseMovePage');
     // const mouseMoveClient = document.getElementById('mouseMoveClient');
     window.addEventListener('mousemove', function(position) {
