@@ -1,21 +1,22 @@
-let userBrowser, userInfo = navigator.userAgent;
-let noOsNavigatorVersion = userInfo.split(/[()]+/);
-let OSInfo = noOsNavigatorVersion[1].split(/;/);
-document.getElementById('OSInfo').innerHTML = `${OSInfo[1]}`;
-document.getElementById('navigatorInfo').innerHTML = `${noOsNavigatorVersion[0]} (${noOsNavigatorVersion[2]})`;
-console.log(userInfo);
-if(userInfo.indexOf("Chrome") > -1) {
-    userBrowser = "Google Chrome";
-} else if (userInfo.indexOf("Safari") > -1) {
-    userBrowser = "Apple Safari";
-} else if (userInfo.indexOf("Opera") > -1) {
-    userBrowser = "Opera";
-} else if (userInfo.indexOf("Firefox") > -1) {
-    userBrowser = "Mozilla Firefox";
-} else if (userInfo.indexOf("MSIE") > -1) {
-    userBrowser = "Microsoft Internet Explorer";
-}
-document.getElementById('userNavigator').innerHTML = `navigator ${userBrowser}`;
+document.getElementById('OSInfo').innerHTML = navigator.platform;
+// let userBrowser, userInfo = navigator.userAgent;
+// console.log(userInfo);
+// if(userInfo.indexOf("Chrome") > -1) {
+//     userBrowser = "Google Chrome";
+// } else if (userInfo.indexOf("Safari") > -1) {
+//     userBrowser = "Apple Safari";
+// } else if (userInfo.indexOf("Opera") > -1) {
+//     userBrowser = "Opera";
+// } else if (userInfo.indexOf("Firefox") > -1) {
+//     userBrowser = "Mozilla Firefox";
+// } else if (userInfo.indexOf("MSIE") > -1) {
+//     userBrowser = "Microsoft Internet Explorer";
+// }
+// document.getElementById('userNavigator').innerHTML = `navigator ${userBrowser}`;
+// let noOsNavigatorVersion = userInfo.split(/[()]+/);
+document.getElementById('navigatorInfo').innerHTML = navigator.userAgent;
+document.getElementById('userNavigator').innerHTML = `${navigator.appCodeName} version ${navigator.product}`;
+document.getElementById('userClocks').innerHTML = `machine has ${navigator.hardwareConcurrency} CPU's cores`;
 // const mouseMovePage = document.getElementById('mouseMovePage');
 // const mouseMoveClient = document.getElementById('mouseMoveClient');
 window.addEventListener('mousemove', function(position) {
@@ -57,3 +58,4 @@ window.addEventListener('resize', function(){
     screenSize();
 });
 screenSize();
+GeolocationCoordinates
