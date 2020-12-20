@@ -1,6 +1,6 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#osInfo').innerHTML = navigator.platform;
+    var a = document.getElementById('osInfo')
+    a.innerHTML = window.navigator.platform;
     // let userBrowser, userInfo = navigator.userAgent;
     // console.log(userInfo);
     // if(userInfo.indexOf("Chrome") > -1) {
