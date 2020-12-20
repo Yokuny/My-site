@@ -6,17 +6,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="background.css">
 </head>
-<body>
+<body onpagehide='leftThePage()' onpageshow='pageShowed()' onkeypress='keysPressed()'>
     <div id="background">
         <p id="osInfo">-</p>
+        <p id="vendorInfo">-</p>
         <p id="userNavigator">-</p>
         <p id="navigatorInfo">-</p>
         <p id="windowSize">-</p>
         <p id="contentSize">-</p>
         <p id="mouseClick">haven't clicked yet</p>
         <p id="mouseClicksCount">haven't clicked yet</p>
+        <p id="keysPressed">haven't pressed yet</p>
         <p id="mouseMovePage">-</p>
         <p id="mouseMoveClient">-</p>
+        <p id="acessData">-</p>
+        <p id="pageShowed">-</p>
+        <p id="leftThePage">-</p>
         <p id="userCPUClocks">-</p>
     </div>
     <script type="application/javascript" src="background.js"></script>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('osInfo').innerHTML = window.navigator.platform;
+    document.querySelector('#osInfo').innerHTML = window.navigator.platform;
     // let userBrowser, userInfo = navigator.userAgent;
     // console.log(userInfo);
     // if(userInfo.indexOf("Chrome") > -1) {
@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // document.getElementById('userNavigator').innerHTML = `navigator ${userBrowser}`;
     // let noOsNavigatorVersion = userInfo.split(/[()]+/);
     document.querySelector('#navigatorInfo').innerHTML = navigator.userAgent;
+    document.querySelector('#vendorInfo').innerHTML = navigator.vendor;
     document.querySelector('#userNavigator').innerHTML = `${navigator.appCodeName} version ${navigator.product}`;
     document.querySelector('#userCPUClocks').innerHTML = `machine has ${navigator.hardwareConcurrency} CPU's cores`;
+    document.querySelector('#acessData').innerHTML = Date();
     // const mouseMovePage = document.getElementById('mouseMovePage');
     // const mouseMoveClient = document.getElementById('mouseMoveClient');
     window.addEventListener('mousemove', function(position) {
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     // const mouseClick = document.getElementById('mouseClick');
-    var clicksCount = 0;
+    var clicksCount = 1;
     window.addEventListener('click', function(click) {
         document.getElementById('mouseClick').innerHTML = `clicked at ( x: ${click.clientX} y: ${click.clientY} )`;
         document.getElementById('mouseClicksCount').innerHTML = `have clicked ${clicksCount} times`;
@@ -59,4 +61,21 @@ document.addEventListener('DOMContentLoaded', function() {
         screenSize();
     });
     screenSize();
+    document.querySelector('#leftThePage').innerHTML = '';
+    document.querySelector('#pageShowed').innerHTML = '';
 });
+let pageLeftCount = 1;
+function leftThePage(){
+    document.querySelector('#leftThePage').innerHTML = `navigates away from the page ${pageLeftCount} times`;
+    pageLeftCount++;
+};
+let pageShowedCount = 1;
+function pageShowed(){
+    document.querySelector('#pageShowed').innerHTML = `page showed ${pageShowedCount} time(s)`;
+    pageShowedCount ++;
+};
+let keysPressedCount = 1;
+function keysPressed(){
+    document.getElementById('keysPressed').innerHTML = `keyboard keys pressed ${keysPressedCount} times`;
+    keysPressedCount++;
+};
