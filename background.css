@@ -1,10 +1,17 @@
 body{
-    background-color: #131516;
-    color: white;
-    z-index: 2;
+    background-color: #111314;
+    color: #4D4D4D;
+    z-index: -20;
 }
 body #background{
-    position: absolute;
-    left: 3%;
-    bottom: 0%;
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    transform: translateX(-25%) translateY(-50%);
+    z-index: -19;
+}
+body #background code{
+    font-size: 28px;
+    line-height: 40px;
+    box-sizing: border-box;
 }
