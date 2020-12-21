@@ -67,3 +67,11 @@ function keysPressed(){
     document.getElementById('keysPressed').innerHTML = `keyboard keys pressed ${keysPressedCount} times`;
     keysPressedCount++;
 };
+const zeroFill = n => {
+    return ('0' + n).slice(-2);
+}
+setInterval(() => {
+    const actualDate = new Date();
+    const dateAndHour = ` ${zeroFill(actualDate.getUTCDate())}/${zeroFill((actualDate.getMonth() + 1))}/${actualDate.getFullYear()} ${zeroFill(actualDate.getHours())}:${zeroFill(actualDate.getMinutes())}:${zeroFill(actualDate.getSeconds())}`;
+    document.getElementById('actualDate').innerHTML = dateAndHour;
+}, 1000);
